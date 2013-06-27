@@ -19,3 +19,7 @@
 - name: Make script exec.
   command: /bin/chmod +x /home/ploneuser/bin/mkenv27.sh
 # Todo make this also a var [ploneuser]
+
+- name: Upload bash_profile
+  copy: src=../files/bash_profile dest=/home/ploneuser/.bash_profile owner=ploneusuer mode=0644
+# Todo make this also a var [ploneuser]
