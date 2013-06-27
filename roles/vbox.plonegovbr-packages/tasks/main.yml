@@ -1,0 +1,58 @@
+---
+# This role installs all needed packages
+
+- name: Install all packages we need
+  apt: name={{item}} state=present
+  with_items:
+    - htop
+    - python-virtualenv
+    - build-essential
+    - libssl-dev
+    - libxml2-dev
+    - libxslt1-dev
+    - libbz2-dev
+    - zlib1g-dev
+    - python-setuptools
+    - python-dev
+    - libjpeg62-dev
+    - libreadline-gplv2-dev
+    - python-imaging
+    - wv
+    - poppler-utils
+
+# Todo: which state we want to have present or latest?
+
+
+
+- name: create ssh dir for plone user
+  file: state=directory path=/home/ploneuser/.ssh/ mode=700
+
+
+- name: create bin dir
+  file: state=directory path=/home/ploneuser/bin
+
+- name: create sites dir
+  file: state=directory path=/home/ploneuser/sites
+# Todo: check permissions, if needed change them
+
+- name: download mkenv
+  command: /usr/bin/wget -P /home/ploneuser/bin https://raw.github.com/svx/mkenv27/master/mkenv27.sh creates=/home/ploneuser/bin/mkenv27.sh
+  # Todo: make a check, only download if file is not already there - done see the creates module^^
+
+- name: change permissions of mkenv to ploneuser
+  command: /bin/chown ploneuser:ploneuser /home/ploneuser/bin/mkenv27.sh
+
+- name: make mkenv executable
+  command: /bin/chmod +x /home/ploneuser/bin/mkenv27.sh
+# Todo: make this a variable
+
+# Todo:
+# - cleanup
+# - transfer someof above stuff into vars, for example user, dirs and permissions
+# - templates for webserver sshd [with allowed user ploneuser], disable root, bla
+# - templates for nginx, well or via fabric we will have to check, if we do it here we can split server and application
+# - bashrc template for user, with git
+# - vim for sudouser and for ploneuser with all highlting we need for example with nginx for sudouser
+# - customized moth, if we do it here we can remove it from fabric which would be nice cause we split server and app
+# - add missing packages to package_list
+#
