@@ -16,3 +16,6 @@
 #- name: add user to allowes user in /etc/sshd
 #  lineinfile: dest=/etc/ssh/sshd_config backup=yes regexp='^UseLogin' insertafter='#UseLogin' line='AllowUsers {{ user_name }}'
 
+- name: Upload ssh config
+  template: src=sshd_config.j2 dest=/etc/ssh/sshd_config
+

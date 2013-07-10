@@ -14,6 +14,6 @@
   - create_user
 #  - ploneuser_setup
 
-#  handlers:
-#  - name: restart ssh
-#    action: service name name=ssh state=restarted
+  handlers:
+  - name: restart ssh
+    action: service name name=ssh state=restarted
