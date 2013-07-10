@@ -1,0 +1,12 @@
+---
+# Playbook for the basic setup for a Ploneserver
+
+- hosts: ploneservers
+  vars_files:
+  - group_vars/ploneservers_vars.yml
+
+  roles:
+  - apt-update
+  - apt-upgrade
+  - ploneservers_packages
+  - ploneuser_setup

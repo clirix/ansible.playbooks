@@ -1,0 +1,25 @@
+---
+# This role will setup all dirs and script for the ploneuser
+
+- name: Create /bin dir in $HOME
+  file: state=directory path=/home/ploneuser/bin
+# Todo make this a var
+
+- name: Create /sites dir in $HOME
+  file: state=directory path=/home/{{ user_name }}/sites
+# Todo same goes here make ploneuser a var
+
+- name: Download mkenv wrapper
+  command: /usr/bin/wget -P /home/{{ user_name }}/bin https://raw.github.com/svx/mkenv27/master/mkenv27.sh creates=/home/{{ user_name }}/bin/mkenv27.sh
+
+- name: Change permissions
+  command: /bin/chown {{ user_name }}:{{ user_name }} /home/{{ user_name }}/bin/mkenv27.sh
+# Todo make this also a var [ploneuser]
+
+- name: Make script exec.
+  command: /bin/chmod +x /home/{{ user_name }}/bin/mkenv27.sh
+# Todo make this also a var [ploneuser]
+
+- name: Upload bash_profile
+  copy: src=../files/bash_profile dest=/home/{{ user_name }}/.bash_profile owner=ploneusuer mode=0644
+# Todo make this also a var [ploneuser]
