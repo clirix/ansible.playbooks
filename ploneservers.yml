@@ -2,7 +2,8 @@
 # Playbook for the basic setup for a Ploneserver
 
 - hosts: ploneservers
-  user: root
+  user: svx
+  sudo: yes
   vars_files:
   - group_vars/ploneservers_vars.yml
 
@@ -10,4 +11,5 @@
   - apt-update
   - apt-upgrade
   - ploneservers_packages
+  - create_user
   - ploneuser_setup
