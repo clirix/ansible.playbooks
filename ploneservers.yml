@@ -2,6 +2,7 @@
 # Playbook for the basic setup for a Ploneserver
 
 - hosts: ploneservers
+  user: root
   vars_files:
   - group_vars/ploneservers_vars.yml
 
