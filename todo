@@ -1,0 +1,8 @@
+todo:
+-----
+ssh config
+munin
+nginx
+varnish
+maybe switch from lineinfile to just copy templates .... needs more research
+...
