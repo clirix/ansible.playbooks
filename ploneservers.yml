@@ -8,8 +8,8 @@
   - group_vars/ploneservers_vars.yml
 
   roles:
-  - apt-update
-  - apt-upgrade
-  - ploneservers_packages
+#  - apt-update
+#  - apt-upgrade
+#  - ploneservers_packages
   - create_user
-  - ploneuser_setup
+#  - ploneuser_setup
