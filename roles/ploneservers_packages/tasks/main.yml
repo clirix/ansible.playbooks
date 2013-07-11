@@ -19,6 +19,6 @@
     - python-imaging
     - wv
     - poppler-utils
-
+    - python-psutil
 
 
