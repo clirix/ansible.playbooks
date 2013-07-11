@@ -1,0 +1,15 @@
+---
+# This role will install the bitcron package
+
+#- name: Upload bitcron sources to /etc/apt/sources.list.d
+#  copy:
+
+#- name: Run update
+#  apt: update_cache=yes
+
+#- name: Install bitcron
+#  apt: name=bit-cron state=present
+
+#- name: Copy examples
+#  command: /bin/mkdir /usr/share/doc/bitcron/examples && /bin/mv /etc/cronscripts/*cron /usr/share/doc/bitcron/examples
+
