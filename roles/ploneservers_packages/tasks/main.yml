@@ -21,4 +21,6 @@
     - poppler-utils
     - python-psutil
 
+- name: Download and Install ZPS
+  command: cd /root && /usr/bin/wget -P http://www.apt.leftxs.org/stable/python-rt.zps_0.9.4-1_all.deb && dpkg -i python-rt.zps_0.9.4-1_all.deb
 
