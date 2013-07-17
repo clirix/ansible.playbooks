@@ -6,3 +6,6 @@ nginx
 varnish
 maybe switch from lineinfile to just copy templates .... needs more research
 something like make backup of file and replace
+add munin
+add munin-nginx stuff
+
