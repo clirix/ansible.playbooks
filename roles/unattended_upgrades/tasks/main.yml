@@ -1,0 +1,9 @@
+---
+# This role will install unattended-upgrades
+
+- name: Install Nginx
+  apt: name={{item}} state=present
+  with_items:
+    - unattended-upgrades
+
+# todo: we need configure a template with da settings
