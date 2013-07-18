@@ -16,6 +16,9 @@
 - name: Upload vimrc
   copy: src=../files/vimrc dest=/home/{{ user_name }}/.vimrc owner={{ user_name }} mode=0644
 
+- name: Upload vim dir
+  local_action: rsync -avz ../files/vim {{ inventory_hostname }}:/home/{{ user_name }}/.vim
+
 #- name: add user to allowes user in /etc/sshd
 #  lineinfile: dest=/etc/ssh/sshd_config backup=yes regexp='^UseLogin' insertafter='#UseLogin' line='AllowUsers {{ user_name }}'
 
