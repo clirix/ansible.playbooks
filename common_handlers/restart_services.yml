@@ -10,4 +10,5 @@
 - name: restart sshd
   action: service name=sshd state=restarted
 
-
+- name: restart postfix
+  action: service name=postfix state=restarted
