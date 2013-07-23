@@ -2,7 +2,8 @@ todo:
 -----
 ssh config
 munin
-nginx
+nginx- template for vhosts ?
+postfix
 varnish
 maybe switch from lineinfile to just copy templates .... needs more research
 something like make backup of file and replace
