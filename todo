@@ -10,3 +10,4 @@ add munin-nginx stuff
 add auto-updates
 deploy vim via git ? - read: http://www.ansibleworks.com/docs/modules.html/#git
 as copy file
+add extra vbox settings [as own role] for plonegov
