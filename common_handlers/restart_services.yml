@@ -4,7 +4,8 @@
 ##
 
 - name: restart nginx
-  action: #ADDHERETHEACTION
+  action: service name=nginx state=restarted
+  #action: #ADDHERETHEACTION
 
 - name: restart ssh
   action: #ADDHERETHEACTION
