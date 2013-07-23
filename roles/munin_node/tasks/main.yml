@@ -1,0 +1,9 @@
+---
+# This role will install, configure a munin-node
+
+name: Install munin-node
+apt: name={{item}} state=present
+with_items:
+  - munin-node
+
+# todo: add line with munin-server ip
