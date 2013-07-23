@@ -1,0 +1,9 @@
+---
+# This role will install, configure and restart postfix
+
+- name: Install postfix
+  apt: name={{item}} state=present
+  with_items:
+    - postfix
+
+
