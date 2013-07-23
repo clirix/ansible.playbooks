@@ -2,7 +2,7 @@ todo:
 -----
 munin
 nginx- template for vhosts ?
-postfix
+postfix add debconf-set-selections to /tmp and remove afterwards? or upload config
 varnish
 something like make backup of file and replace
 add munin
