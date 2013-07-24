@@ -1,3 +1,9 @@
 ---
 # Variables for Ploneservers
+# User Vars
 user_name: yadayada
+site_name: sven.com #example
+site_mail: sven@sven.com
+
+# Server Vars
+server_mail_admin: sven@so36.net
