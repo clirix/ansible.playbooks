@@ -5,7 +5,6 @@ nginx- template for vhosts ?
 postfix add debconf-set-selections to /tmp and remove afterwards? or upload config
 varnish
 something like make backup of file and replace
-add munin
 add munin-nginx stuff
 add auto-updates
 deploy vim via git ? - read: http://www.ansibleworks.com/docs/modules.html/#git
