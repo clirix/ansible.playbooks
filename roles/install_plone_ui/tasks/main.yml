@@ -1,4 +1,9 @@
 ---
 # This role wil extract the Plone UI
 - name: Extract UI
+  sudo: False
   command: tar -xf Plone-4.3.1-UnifiedInstaller.tgz
+
+- name: Running Install
+  sudo: False
+  action: command ./Plone-4.3.1-UnifiedInstaller/install.sh standalone

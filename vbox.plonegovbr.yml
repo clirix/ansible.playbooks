@@ -12,4 +12,4 @@
 #  - apt-upgrade
 #  - vbox.plonegovbr-packages
   - download_plone_ui
-#  - install_plone_ui
+  - install_plone_ui
