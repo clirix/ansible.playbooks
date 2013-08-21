@@ -1,2 +1,13 @@
 ---
 # Deploy for the VirtualBox Image for PloneGovBr
+
+- hosts: vbox.plone
+  user: plonegov
+  sudo: yes
+  vars_files:
+  - group_vars/ploneservers_vars.yml
+
+  roles:
+  - apt-update
+  - apt-upgrade
+  - ploneservers_packages
