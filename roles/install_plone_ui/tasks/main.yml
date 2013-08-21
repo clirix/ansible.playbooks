@@ -1,0 +1,4 @@
+---
+# This role wil extract the Plone UI
+- name: Extract UI
+  command: tar -xf Plone-4.3.1-UnifiedInstaller.tgz

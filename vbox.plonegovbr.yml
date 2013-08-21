@@ -8,6 +8,8 @@
   - group_vars/ploneservers_vars.yml
 
   roles:
-  - apt-update
-  - apt-upgrade
-  - vbox.plonegovbr-packages
+#  - apt-update
+#  - apt-upgrade
+#  - vbox.plonegovbr-packages
+  - download_plone_ui
+  - install_plone_ui
