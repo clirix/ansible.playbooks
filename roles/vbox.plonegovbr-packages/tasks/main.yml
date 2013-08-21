@@ -24,26 +24,26 @@
 
 
 
-- name: create ssh dir for plone user
-  file: state=directory path=/home/ploneuser/.ssh/ mode=700
+#- name: create ssh dir for plone user
+#  file: state=directory path=/home/ploneuser/.ssh/ mode=700
 
 
-- name: create bin dir
-  file: state=directory path=/home/ploneuser/bin
+#- name: create bin dir
+#  file: state=directory path=/home/ploneuser/bin
 
-- name: create sites dir
-  file: state=directory path=/home/ploneuser/sites
+#- name: create sites dir
+#  file: state=directory path=/home/ploneuser/sites
 # Todo: check permissions, if needed change them
 
-- name: download mkenv
-  command: /usr/bin/wget -P /home/ploneuser/bin https://raw.github.com/svx/mkenv27/master/mkenv27.sh creates=/home/ploneuser/bin/mkenv27.sh
+#- name: download mkenv
+#  command: /usr/bin/wget -P /home/ploneuser/bin https://raw.github.com/svx/mkenv27/master/mkenv27.sh creates=/home/ploneuser/bin/mkenv27.sh
   # Todo: make a check, only download if file is not already there - done see the creates module^^
 
-- name: change permissions of mkenv to ploneuser
-  command: /bin/chown ploneuser:ploneuser /home/ploneuser/bin/mkenv27.sh
+#- name: change permissions of mkenv to ploneuser
+#  command: /bin/chown ploneuser:ploneuser /home/ploneuser/bin/mkenv27.sh
 
-- name: make mkenv executable
-  command: /bin/chmod +x /home/ploneuser/bin/mkenv27.sh
+#- name: make mkenv executable
+#  command: /bin/chmod +x /home/ploneuser/bin/mkenv27.sh
 # Todo: make this a variable
 
 # Todo:

@@ -10,4 +10,4 @@
   roles:
   - apt-update
   - apt-upgrade
-  - ploneservers_packages
+  - vbox.plonegovbr-packages
