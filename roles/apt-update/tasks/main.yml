@@ -3,3 +3,8 @@
 
 - name: Update Packages with apt-get update
   apt: update_cache=yes
+#- irc: server=irc.freenode.net channel="#milieudefensie" port=6667 msg="All finished at {{ ansible_date_time.iso8601 }}"
+- name: send mail
+  sudo: no
+  local_action: mail subject='Mr.Butler' body='System {{ ansible_hostname }} has been successfully provisioned.' from='svens@milieudefensie.nl' to='sven.strack@milieudefensie.nl'
+

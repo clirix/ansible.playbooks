@@ -1,0 +1,26 @@
+---
+# Playbook for the basic setup for a Ploneserver
+
+- hosts: testserver
+  user: test
+  sudo: yes
+  vars_files:
+  - group_vars/ploneservers_vars.yml
+
+  roles:
+  - apt-update
+    #  - apt-upgrade
+    #  - ploneservers_packages
+    #  - create_user
+    #  - ploneuser_setup
+
+#  tasks:
+#      - local_action: mail
+#                      host='127.0.0.1'
+#                      port=2025
+#                      subject="Ansible-report"
+#                      body="Hello, this is an e-mail. I hope you like it ;-)"
+#                      from="developers@milieudefensie.nl (Jane Jolie)"
+#                      to="sven.strack@milieudefensie.nl"
+#                      charset=utf8
+
